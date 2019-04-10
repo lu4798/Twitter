@@ -23,14 +23,14 @@ class twitter_things:
 
     def iterate(self):
         array = ''
-        for twit in self:
+        for tweet in self:
             exclude = []
-            for url in twit.urls:
+            for url in tweet.urls:
                 exclude.append(url.url)
-            if twit.media is not None:
-                for media in twit.media:
+            if tweet.media is not None:
+                for media in tweet.media:
                     exclude.append(media.url)
-            aux = twit.text.split()
+            aux = tweet.text.split()
             array = array + ' '.join([i for i in aux if i not in exclude]) + ' '
         return word_counter(array)[0:20]
 
