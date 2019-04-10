@@ -29,3 +29,4 @@ Some considerations to have in mind:
 
 * python -m twitter_test.py
 
+**twitter_test.py** tests the twitter's api integration and functionality
