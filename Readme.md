@@ -28,5 +28,3 @@ Some considerations to have in mind:
 **twitter_test.py** tests the twitter's api integration and functionality
 
 * python -m twitter_test.py
-
-**twitter_test.py** tests the twitter's api integration and functionality
