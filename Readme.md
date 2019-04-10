@@ -23,7 +23,11 @@ Some considerations to have in mind:
 
 **counter_test.py** tests word_counter() functionality
 
+<<<<<<< HEAD
 * pytest test_function.py -v
 
 **twitter_test.py** tests the twitter's api integration and functionality
 
+=======
+**twitter_test.py** tests the twitter's api integration and functionality
+>>>>>>> origin/master
