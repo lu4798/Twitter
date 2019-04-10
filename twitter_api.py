@@ -16,7 +16,7 @@ class twitter_things:
                             access_token_key=ACCESS_TOKEN_KEY,
                             access_token_secret=ACCESS_TOKEN_SECRET)
 
-        return api.GetUserTimeline(screen_name='@_lalusi', count=200, exclude_replies=True, include_rts=False)[0:50]
+        return api.GetUserTimeline(screen_name='@realDonaldTrump', count=200, exclude_replies=True, include_rts=False)[0:50]
 
     def twitter_word_count(self,twits):
         twits.iterate()
