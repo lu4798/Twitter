@@ -23,4 +23,10 @@ Some considerations to have in mind:
 
 **counter_test.py** tests word_counter() functionality
 
+* pytest counter_function.py -v
+
+**twitter_test.py** tests the twitter's api integration and functionality
+
+* python -m twitter_test.py
+
 **twitter_test.py** tests the twitter's api integration and functionality
