@@ -79,9 +79,3 @@ def word_counter(array):
     return sorted(final_list ,key= lambda x : x[1],reverse=True)
 
 
-
-if __name__ == '__main__':
-
-    tweets = twitter_things().twitter_tweets(mock)
-    print(tweets)
-
