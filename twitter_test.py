@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import Mock, MagicMock
 
-from PruebaListas import twitter_things
+from twitter_api import twitter_things
 
 class MyTestCase(unittest.TestCase):
     def test_example(self):
