@@ -1,4 +1,4 @@
-from twitter_api import twitter_things.word_counter
+from twitter_api import word_counter
 import pytest
 
 def test_argument_not_string():
