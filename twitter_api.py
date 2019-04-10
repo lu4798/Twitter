@@ -4,17 +4,17 @@ import twitter
 import os
 
 #VARIABLES DE ENTORNO
-#CONSUMER_KEY = os.environ['CONSUMER_KEY']
-#CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
-#ACCESS_TOKEN_KEY = os.environ['ACCESS_TOKEN_KEY']
-#ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
+CONSUMER_KEY = os.environ['CONSUMER_KEY']
+CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
+ACCESS_TOKEN_KEY = os.environ['ACCESS_TOKEN_KEY']
+ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 class twitter_things:
     def twitter_tweets(self, mock):
-        api = twitter.Api(consumer_key='xJBNVbtmRJrd44fslR38GiJNr',
-                            consumer_secret='w22znbElOOjVs2oYORs2hqxmUF1K6MfJ3YUEoefttZVDG5SbwW',
-                            access_token_key='831510109629071361-OFLx61XL1iiFQNDvH1OeBYgBWZn5dQR',
-                            access_token_secret='l3NObDqc4psYpok3YSv7HFKwuVEAdijABoE0WSE3CEfDT')
+        api = twitter.Api(consumer_key=CONSUMER_KEY,
+                            consumer_secret=CONSUMER_SECRET,
+                            access_token_key=ACCESS_TOKEN_KEY,
+                            access_token_secret=ACCESS_TOKEN_SECRET)
 
         return api.GetUserTimeline(screen_name='@_lalusi', count=200, exclude_replies=True, include_rts=False)[0:50]
 
@@ -32,7 +32,7 @@ class twitter_things:
                     exclude.append(media.url)
             aux = twit.text.split()
             array = array + ' '.join([i for i in aux if i not in exclude]) + ' '
-        return word_counter(array)
+        return word_counter(array[0:20])
 
 
 
