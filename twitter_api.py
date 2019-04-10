@@ -10,7 +10,7 @@ ACCESS_TOKEN_KEY = os.environ['ACCESS_TOKEN_KEY']
 ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 class twitter_things:
-    def twitter_tweets(self, mock):
+    def twitter_tweets(self):
         api = twitter.Api(consumer_key=CONSUMER_KEY,
                             consumer_secret=CONSUMER_SECRET,
                             access_token_key=ACCESS_TOKEN_KEY,
@@ -32,7 +32,7 @@ class twitter_things:
                     exclude.append(media.url)
             aux = twit.text.split()
             array = array + ' '.join([i for i in aux if i not in exclude]) + ' '
-        return word_counter(array[0:20])
+        return word_counter(array)[0:20]
 
 
 
