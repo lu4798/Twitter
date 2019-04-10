@@ -1,4 +1,4 @@
-from twitter_word_count import twitter_things.word_counter
+from twitter_api import twitter_things.word_counter
 import pytest
 
 def test_argument_not_string():
@@ -30,7 +30,7 @@ def test_two_words_capitalize_difference():
     assert word_counter("HoLa hola")==[["hola", 2]]
 
 def test_not_letter_simbols():
-    assert word_counter(". ,-´")==[]
+    assert word_counter(". ,-Â´")==[]
 
 def test_all_different_words_with_stopwords():
     assert word_counter("hola adios que tal como va")==[["hola",1],["adios",1],["tal",1]]
@@ -45,7 +45,7 @@ def test_bulgarian_stopwords():
     assert word_counter("???? ?????? ????? ????? ????? ???? ???? ")==[["?????",2],["????",1]]
 
 def test_czech_stopwords():
-    assert word_counter("pokuD déšt Déšt naproti kocka")==[["déšt",2],["pokud",1],["kocka", 1]]
+    assert word_counter("pokuD dÃ©Å¡t DÃ©Å¡t naproti kocka")==[["dÃ©Å¡t",2],["pokud",1],["kocka", 1]]
 
 def test_all_different_words_with_stopwords_from_different_languages():
     assert word_counter("hola adios que tal como va naproti ???? ????")==[["hola",1],["adios",1],["tal",1]]
