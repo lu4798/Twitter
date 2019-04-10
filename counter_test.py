@@ -38,7 +38,6 @@ def test_all_different_words_with_stopwords():
 def test_english_stopwords():
     assert word_counter("The rain is in the su'n Sun thE Rain RAIN the In")==[["rain",3],["sun",2]]
 
-
 def test_czech_stopwords():
     assert word_counter("pokuD déšt Déšt naproti kocka")==[["déšt",2],["pokud",1],["kocka", 1]]
 
